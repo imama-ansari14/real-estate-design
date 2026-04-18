@@ -40,9 +40,24 @@ export default function Hero() {
       const tl = gsap.timeline();
 
       tl.fromTo(titleRef.current, { y: 80, opacity: 0 }, { y: 0, opacity: 1 })
-        .fromTo(subRef.current, { y: 40, opacity: 0 }, { y: 0, opacity: 1 }, "-=0.5")
-        .fromTo(btnRef.current, { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1 }, "-=0.5")
-        .fromTo(cardsRef.current, { y: 80, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.2 }, "-=0.5");
+        .fromTo(
+          subRef.current,
+          { y: 40, opacity: 0 },
+          { y: 0, opacity: 1 },
+          "-=0.5"
+        )
+        .fromTo(
+          btnRef.current,
+          { scale: 0.8, opacity: 0 },
+          { scale: 1, opacity: 1 },
+          "-=0.5"
+        )
+        .fromTo(
+          cardsRef.current,
+          { y: 80, opacity: 0 },
+          { y: 0, opacity: 1, stagger: 0.2 },
+          "-=0.5"
+        );
     });
 
     return () => ctx.revert();
@@ -74,7 +89,8 @@ export default function Hero() {
           </h1>
 
           <p ref={subRef} className="mt-6 text-gray-300 max-w-md">
-            Whether it's your home, office, or a commercial project, we bring your vision to life.
+            Whether it's your home, office, or a commercial project, we bring
+            your vision to life.
           </p>
 
           <button
@@ -82,7 +98,9 @@ export default function Hero() {
             className="mt-8 px-6 py-3 border border-white rounded-full flex items-center gap-3 hover:bg-white hover:text-black transition"
           >
             Take Counsel
-            <span className="bg-yellow-400 text-black w-8 h-8 flex items-center justify-center rounded-full">→</span>
+            <span className="bg-yellow-400 text-black w-8 h-8 flex items-center justify-center rounded-full">
+              →
+            </span>
           </button>
         </div>
 

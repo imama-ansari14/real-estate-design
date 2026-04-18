@@ -12,7 +12,6 @@ export default function Services() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      
       // TITLE ANIMATION
       gsap.fromTo(
         titleRef.current,
@@ -60,7 +59,6 @@ export default function Services() {
           },
         }
       );
-
     }, sectionRef);
 
     return () => ctx.revert();
@@ -101,14 +99,10 @@ export default function Services() {
           className="text-4xl md:text-6xl font-bold leading-tight"
         >
           Experience{" "}
-          <span className="text-yellow-500">The Art Of Interior</span>{" "}
-          Design
+          <span className="text-yellow-500">The Art Of Interior</span> Design
         </h2>
 
-        <p
-          ref={textRef}
-          className="mt-6 text-gray-600 max-w-xl"
-        >
+        <p ref={textRef} className="mt-6 text-gray-600 max-w-xl">
           We specialize in transforming visions into reality. Explore our
           portfolio of innovative architectural and interior design projects.
         </p>
@@ -125,9 +119,7 @@ export default function Services() {
             {/* HOVER GLOW */}
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-yellow-400/10 to-transparent"></div>
 
-            <h3 className="text-lg font-semibold mb-6">
-              {service.title}
-            </h3>
+            <h3 className="text-lg font-semibold mb-6">{service.title}</h3>
 
             <div className="h-[1px] bg-gray-200 mb-6"></div>
 

@@ -23,7 +23,6 @@ export default function SectionLuxury() {
 
   return (
     <section className="relative py-32 px-6 md:px-20 text-white overflow-hidden">
-      
       {/* BACKGROUND IMAGE */}
       <img
         src={sectionImg}
@@ -36,19 +35,15 @@ export default function SectionLuxury() {
 
       {/* CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-        
         {/* LEFT */}
         <div ref={leftRef} className="max-w-xl">
-          
           <p className="text-xs border border-white/20 px-4 py-1 inline-block rounded-full mb-6">
             STARTED IN 1991
           </p>
 
           <h2 className="text-4xl md:text-6xl font-bold leading-tight">
             Where Spaces Inspire, And{" "}
-            <span className="text-yellow-400">
-              Design Comes Alive
-            </span>
+            <span className="text-yellow-400">Design Comes Alive</span>
           </h2>
 
           {/* BULLETS */}
