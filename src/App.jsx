@@ -6,6 +6,8 @@ import Services from "./components/Services";
 import SectionLuxury from "./components/SectionLuxury";
 import ServicesShowcase from "./components/ServicesShowcase";
 import StatsShowcasePro from "./components/StatsShowcasePro";
+import HowWeWork from "./components/HowWeWork";
+import ProjectsSection from "./components/ProjectsSection";
 import "./App.css";
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
       <SectionLuxury />
       <ServicesShowcase />
       <StatsShowcasePro />
+      <HowWeWork/>
+      <ProjectsSection/>
     </>
   );
 }
