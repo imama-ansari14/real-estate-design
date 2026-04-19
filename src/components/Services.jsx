@@ -117,11 +117,11 @@ export default function Services() {
             className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-500 relative overflow-hidden"
           >
             {/* HOVER GLOW */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-yellow-400/10 to-transparent"></div>
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-linear-to-br from-yellow-400/10 to-transparent"></div>
 
             <h3 className="text-lg font-semibold mb-6">{service.title}</h3>
 
-            <div className="h-[1px] bg-gray-200 mb-6"></div>
+            <div className="h-px bg-gray-200 mb-6"></div>
 
             <p className="text-sm text-gray-600 leading-relaxed">
               {service.desc}

@@ -73,12 +73,12 @@ export default function SectionLuxury() {
         {/* RIGHT IMAGE CARD */}
         <div
           ref={rightRef}
-          className="rounded-[24px] overflow-hidden shadow-2xl"
+          className="rounded-3xl overflow-hidden shadow-2xl"
         >
           <img
             src={sectionImg2}
             alt="interior"
-            className="w-[520px] h-[520px] object-cover"
+            className="w-130 h-130 object-cover"
           />
         </div>
       </div>
