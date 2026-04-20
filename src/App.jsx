@@ -17,12 +17,12 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <Services />
-      <SectionLuxury />
-      <ServicesShowcase />
       <StatsShowcasePro />
-      <HowWeWork/>
-      <ProjectsSection/>
+      <ProjectsSection />
+      <ServicesShowcase />
+      <HowWeWork />
+      <SectionLuxury />
+      <Services />
     </>
   );
 }
