@@ -10,6 +10,7 @@ import HowWeWork from "./components/HowWeWork";
 import ProjectsSection from "./components/ProjectsSection";
 import "./App.css";
 
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -17,12 +18,12 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <StatsShowcasePro />
-      <ProjectsSection />
-      <ServicesShowcase />
-      <HowWeWork />
-      <SectionLuxury />
       <Services />
+      <SectionLuxury />
+      <ServicesShowcase />
+      <StatsShowcasePro />
+      <HowWeWork/>
+      <ProjectsSection/>
     </>
   );
 }

@@ -1,4 +1,4 @@
-// ================= HERO.jsx (UPDATED PREMIUM CARDS LIKE IMAGE) =================
+// ================= HERO.jsx (RESPONSIVE) =================
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
@@ -64,7 +64,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="h-screen w-full relative overflow-hidden">
+    <section className="min-h-screen w-full relative overflow-hidden">
       {/* BG */}
       <img
         key={index}
@@ -75,42 +75,74 @@ export default function Hero() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40 z-10"></div>
+      <div className="absolute inset-0 bg-black/40 z-10" />
 
-      {/* Content */}
-      <div className="relative z-20 h-full flex items-center px-20">
+      {/* Content wrapper — stacks vertically on mobile, side-by-side on xl */}
+      <div className="relative z-20 min-h-screen flex flex-col justify-between px-6 py-16 sm:px-10 md:px-14 lg:px-20">
+
+        {/* ── Hero text block ── */}
         <div className="text-white max-w-3xl">
-          <p className="mb-5 text-xs border border-white/30 px-4 py-1 inline-block rounded-full">
-            FAST AND RELIABLE
+          <p className="mb-5 text-xs border border-white/30 px-4 py-1 inline-block rounded-full tracking-widest uppercase">
+            Fast and Reliable
           </p>
 
-          <h1 ref={titleRef} className="text-[80px] leading-[1.05] font-bold">
-            The Art Of Stunning <br /> Interior Design
+          <h1
+            ref={titleRef}
+            className="
+              text-4xl leading-tight font-bold
+              sm:text-5xl
+              md:text-6xl
+              lg:text-[72px] lg:leading-[1.05]
+              xl:text-[80px]
+            "
+          >
+            The Art Of Stunning <br className="hidden sm:block" /> Interior Design
           </h1>
 
-          <p ref={subRef} className="mt-6 text-gray-300 max-w-md">
+          <p ref={subRef} className="mt-6 text-gray-300 max-w-md text-sm sm:text-base">
             Whether it's your home, office, or a commercial project, we bring
             your vision to life.
           </p>
 
           <button
             ref={btnRef}
-            className="mt-8 px-6 py-3 border border-white rounded-full flex items-center gap-3 hover:bg-white hover:text-black transition"
+            className="mt-8 px-6 py-3 border border-white rounded-full flex items-center gap-3 hover:bg-white hover:text-black transition text-sm sm:text-base w-fit"
           >
             Take Counsel
-            <span className="bg-yellow-400 text-black w-8 h-8 flex items-center justify-center rounded-full">
+            <span className="bg-yellow-400 text-black w-8 h-8 flex items-center justify-center rounded-full flex-shrink-0">
               →
             </span>
           </button>
         </div>
 
-        {/* PREMIUM IMAGE CARDS */}
-        <div className="absolute bottom-16 right-16 flex gap-6">
+        {/* ── Cards row ── */}
+        {/*
+          Mobile  : horizontal scroll, cards compact (w-36 h-48)
+          md      : cards slightly bigger (w-40 h-56)
+          lg+     : full size (w-44 h-60), pinned to bottom-right corner
+        */}
+        <div
+          className="
+            mt-10
+            flex gap-4 overflow-x-auto pb-2
+            sm:gap-5
+            lg:absolute lg:bottom-16 lg:right-16 lg:mt-0 lg:overflow-visible lg:pb-0 lg:gap-6
+          "
+          style={{ scrollSnapType: "x mandatory" }}
+        >
           {[cardImg1, cardImg2, cardImg3].map((img, i) => (
             <div
               key={i}
               ref={(el) => (cardsRef.current[i] = el)}
-              className="relative w-44 h-60 rounded-2xl overflow-hidden group"
+              className="
+                relative flex-shrink-0
+                w-36 h-48
+                sm:w-40 sm:h-52
+                md:w-44 md:h-60
+                rounded-2xl overflow-hidden group
+                cursor-pointer
+              "
+              style={{ scrollSnapAlign: "start" }}
             >
               {/* Image */}
               <img
@@ -120,11 +152,11 @@ export default function Hero() {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40"></div>
+              <div className="absolute inset-0 bg-black/40" />
 
-              {/* Content */}
+              {/* Label */}
               <div className="absolute bottom-4 left-4 text-white">
-                <h3 className="text-lg font-semibold">Interior</h3>
+                <h3 className="text-base sm:text-lg font-semibold">Interior</h3>
                 <p className="text-xs text-gray-300">Design Project</p>
               </div>
             </div>
