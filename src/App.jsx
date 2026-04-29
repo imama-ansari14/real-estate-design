@@ -9,6 +9,7 @@ import StatsShowcasePro from "./components/StatsShowcasePro";
 import HowWeWork from "./components/HowWeWork";
 import ProjectsSection from "./components/ProjectsSection";
 import "./App.css";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <StatsShowcasePro />
       <HowWeWork/>
       <ProjectsSection/>
+      <Footer/>
     </>
   );
 }
